@@ -15,7 +15,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "AcarajeTech\\OnSave\\": "src"
+            "AcarajeTech\\DataSave\\": "src"
         }
     }
 }
