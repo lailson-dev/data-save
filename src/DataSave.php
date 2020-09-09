@@ -29,24 +29,25 @@ abstract class DataSave
         }
     }
 
-    public function findById(?string $where = null, int $id, ?string $fields = '*'): ?\stdClass
+    public function findById(?string $where = null, $value, ?string $fields = '*'): ?\stdClass
     {
         try {
             $sql = "SELECT {$fields} FROM {$this->table}";
 
-            if (!$where) {
+            if (! is_null($where)) {
                 $sql .= " WHERE {$where} = :{$where}";
                 $this->statement = $this->pdo->prepare($sql);
+                $this->statement->bindValue(":{$where}", $value;);
                 $this->statement->execute();
 
                 return (object)$this->statement->fetch();
             }
 
             $this->statement = $this->pdo->prepare($sql);
-            $this->statement->bindValue(":$id", $id);
+            $this->statement->bindValue(":$where", $value);
             $this->statement->execute();
 
-            return $this->statement->fetch();
+            return (object)$this->statement->fetch();
         } catch (\PDOException $exception) {
             $this->error = $exception;
             return null;
