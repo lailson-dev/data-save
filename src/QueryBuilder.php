@@ -1,6 +1,6 @@
 <?php
 
-namespace AcarajeTech\OnSave;
+namespace AcarajeTech\DataSave;
 
 trait QueryBuilder
 {
