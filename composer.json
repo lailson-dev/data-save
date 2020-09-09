@@ -1,0 +1,21 @@
+{
+    "name": "acarajetech/onsave",
+    "description": "A simple library for data persistence.",
+    "type": "library",
+    "require": {
+        "php": "^7.4",
+        "ext-PDO": "^7.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lailson Conceição",
+            "email": "lailsondev@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AcarajeTech\\OnSave\\": "src"
+        }
+    }
+}
