@@ -1,5 +1,5 @@
 {
-    "name": "acarajetech/onsave",
+    "name": "acarajetech/datasave",
     "description": "A simple library for data persistence.",
     "type": "library",
     "require": {
