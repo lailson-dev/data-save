@@ -37,7 +37,7 @@ abstract class DataSave
             if (! is_null($where)) {
                 $sql .= " WHERE {$where} = :{$where}";
                 $this->statement = $this->pdo->prepare($sql);
-                $this->statement->bindValue(":{$where}", $value;);
+                $this->statement->bindValue(":{$where}", $value);
                 $this->statement->execute();
 
                 return (object)$this->statement->fetch();
